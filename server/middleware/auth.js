@@ -13,7 +13,9 @@ const authenticateJwt = (req, res, next) => {
       next();
     });
   } else {
-    res.sendStatus(401);
+    res.status(401).json({
+      msz:"maybe you are not authouized."
+    });
   }
 };
 
